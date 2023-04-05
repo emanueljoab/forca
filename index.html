@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Forca</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="popup">
+            <h1>Jogo da forca</h1>
+            <p>Escolha um tema</p>
+            <div>
+                <span id="tema1">Tema 1</span>
+                <span id="tema2">Tema 2</span>
+            </div>
+        </div>
+        <h1 id="resultado">&nbsp;</h1>
+        <svg width="270" height="370">
+            <!-- Forca: Haste superior -->
+            <line x1="15" y1="50" x2="230" y2="50" stroke="black" stroke-width="10"/>
+            <!-- Forca: Poste -->
+            <line x1="20" y1="50" x2="20" y2="350" stroke="black" stroke-width="10"/>
+            <!-- Forca: Corda -->
+            <line x1="225" y1="50" x2="225" y2="75" stroke="black" stroke-width="10"/>
+            <!-- Boneco -->
+            <circle cx="225" cy="100" r="25" stroke="black" stroke-width="5" fill="none" id="cabeça"/>
+            <line x1="225" y1="125" x2="225" y2="200" stroke="black" stroke-width="5" id="corpo"/>
+            <line x1="225" y1="125" x2="200" y2="200" stroke="black" stroke-width="5" id="braçoE"/>
+            <line x1="225" y1="125" x2="250" y2="200" stroke="black" stroke-width="5" id="braçoD"/>
+            <line x1="225" y1="200" x2="200" y2="300" stroke="black" stroke-width="5" id="pernaE"/>
+            <line x1="225" y1="200" x2="250" y2="300" stroke="black" stroke-width="5" id="pernaD"/>
+            <text x="212" y="100" font-size="15" font-weight="bold" font-family="Arial" fill="red" id="olhos">X X</text>
+        </svg>
+        <div id="palavra">Carregando...</div>
+        <div class="teclado">
+            <div class="linha-de-cima">
+                <button>Q</button><button>W</button><button>E</button><button>R</button><button>T</button><button>Y</button><button>U</button><button>I</button><button>O</button><button>P</button>
+            </div>
+            <div class="linha-do-meio">
+                <button>A</button><button>S</button><button>D</button><button>F</button><button>G</button><button>H</button><button>J</button><button>K</button><button>L</button>
+            </div>
+            <div class="linha-de-baixo">
+                <button>Z</button><button>X</button><button>C</button><button>V</button><button>B</button><button>N</button><button>M</button>
+            </div>
+        </div>
+        <div id="reiniciar" onclick="window.location.reload();">Jogar novamente</div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
